@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+# Source the AllStar variables
+if [ -f /etc/asterisk/local/allstar.env ]; then
+    . /etc/asterisk/local/allstar.env
+else
+    echo "Unable to read /etc/asterisk/local/allstar.env file."
+    echo "Asterisk will not start."
+    exit 1
+fi
+
+if [ "$(echo "${SAY_IP_AT_BOOT}" | tr "[:upper:]" "[:lower:]")" = "enabled" ]; then
+    sleep 12
+    /etc/asterisk/local/sayip.sh "$NODE"
+fi
+/usr/local/sbin/DVSwitch-startup
+exit 0
