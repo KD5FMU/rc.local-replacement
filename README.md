@@ -3,7 +3,7 @@ This repository is to replace your rc.local file if needed
 First this to do is to go to the proper folder
 
 ```
-cd /etc/asterisk
+cd /etc
 ```
 
 then we can download the script file
