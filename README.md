@@ -19,7 +19,7 @@ sudo chmod +x replace_rc_local.sh
 Once this is done we can execute the script file.
 
 ```
-sudo ./replace_rc.local.sh
+sudo ./replace_rc_local.sh
 ```
 
 Reboot the node and  hope this helps
